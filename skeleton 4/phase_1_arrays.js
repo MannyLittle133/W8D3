@@ -16,4 +16,23 @@ Array.prototype.uniq = function() {
     return retArr;
 }
 
-console.log([1,2,2,3,3,3].uniq())
+//console.log([1,2,2,3,3,3].uniq())
+
+Array.prototype.twoSum = function() {
+    let sumArr = [];
+
+    for (let i = 0; i < this.length; i++) {
+        let num1 = this[i]; 
+
+        for (let j = i + 1; j < this.length; j++) {
+            let num2 = this[j];
+
+            if (num1 + num2 === 0) {
+                sumArr.push([i, j])
+            }
+        }
+    }
+    return sumArr; 
+}
+
+//console.log([1, -1, 3, 2, -2, -3].twoSum())
