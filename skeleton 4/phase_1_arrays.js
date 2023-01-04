@@ -36,3 +36,20 @@ Array.prototype.twoSum = function() {
 }
 
 //console.log([1, -1, 3, 2, -2, -3].twoSum())
+
+Array.prototype.transpose = function() {
+    let newArr = []
+
+    for (let i = 0; i < this.length; i++) {
+        newArr.push([])
+
+
+        for (let j = 0; j < this.length; j++) {
+
+            newArr[i].push(this[j][i])
+        }
+    }
+    return newArr
+}
+
+console.log([[1, 2], [3, 4], [5, 6]].transpose())
